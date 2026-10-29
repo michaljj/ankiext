@@ -1,0 +1,1 @@
+"""dict.cc lookup engine: entity decode, gender→article, binary search."""

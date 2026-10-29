@@ -1,0 +1,1 @@
+"""Fallback lookups (kaikki PL extract, Wiktionary API)."""

@@ -1,0 +1,60 @@
+# AnkiExt configuration (TOML)
+
+[hotkey]
+# Global hotkey that triggers card creation from selected text.
+combos = ["ctrl+shift+d"]
+
+[dictionary]
+# dict.cc txt files (never redistribute; private use only).
+dict_dir = "dict"
+en_de = "cngnfmgfbd-1782440121-798euu.txt"   # EN-DE (large)
+de_en = "cngnfmgbkg-1782440121-798eu8.txt"   # DE-EN (large)
+pl_de = "cngnfmgobm-1782440121-798eu9.txt"   # PL-DE (small)
+de_pl = "cngnfmgbbb-1782440121-798eui.txt"   # DE-PL (small)
+
+# kaikki German extract (plurals + gender enrichment)
+kaikki_de_url = "https://kaikki.org/dictionary/downloads/de/de-extract.jsonl.gz"
+kaikki_de_gz = "data/de-extract.jsonl.gz"
+plural_db = "data/plural.db"
+# Wiktionary last-resort disk cache (network fallback, see [fallback])
+wikt_cache = "data/wikt_cache.sqlite"
+
+[fallback]
+# When true, an unknown word triggers a rate-limited, disk-cached Wiktionary
+# network lookup (last resort). Set false to stay fully offline.
+wiktionary = true
+
+[morphology]
+# Real morphology engines (all optional — pip install to enable).
+#   en_spacy   = spaCy en_core_web_sm        (pip install spacy + spacy download)
+#   pl_morfeusz = morfeusz2                  (pip install morfeusz2)
+#   dwdsmor    = DWDSmor FST (German)        (pip install dwdsmor)
+# When an engine is unavailable, matching falls back to the built-in
+# heuristic morphology and the app behaves exactly as before.
+en_spacy = true
+pl_morfeusz = true
+dwdsmor = true
+# DWDSmor automata dir; empty string = use the installed package's automata.
+automata_dir = ""
+# Use DWDSmor lemma-frequency as a ranking tie-break when present.
+freq_rank = true
+
+[anki]
+# AnkiConnect endpoint (Anki addon 2055492159)
+host = "127.0.0.1"
+port = 8765
+deck = "German::Vocabulary"
+model = "AnkiExt Card"
+
+[languages]
+# Polish detection: if the selected text contains any of these, treat as Polish.
+polish_diacritics = "ąćęłńóśźżĄĆĘŁŃÓŚŹŻ"
+# Otherwise it is treated as English.
+
+[ui]
+# maximum translation candidates shown in preview
+max_candidates = 5
+
+[matching]
+# Total candidates built per lookup (strong + weaker shown behind a toggle).
+total_cap = 15

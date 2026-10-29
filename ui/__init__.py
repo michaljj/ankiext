@@ -1,0 +1,1 @@
+"""UI: system tray + tkinter preview window."""

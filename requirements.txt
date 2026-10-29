@@ -1,0 +1,19 @@
+# AnkiExt dependencies — all free / open source.
+# NOTE: install only what this machine lacks (see README). Python 3.14 wheels:
+#   - keyboard works from source (pure python + ctypes on Windows)
+#   - pystray + pillow may need a newer pillow build on 3.14; tray has a tkinter fallback
+keyboard>=0.13.5
+pystray>=0.19.5
+pillow>=10.0.0
+
+# ---- Optional real-morphology engines (strongly improve matching) ----
+# All three are OPTIONAL: without them the app falls back to built-in
+# heuristic morphology and behaves exactly as before.  Install all for the
+# best "match any inflected word in any language" experience.
+#
+#   pip install dwdsmor                          # German lemma+POS (FST); GPL-2.0
+#   pip install spacy && python -m spacy download en_core_web_sm  # English (MIT + CC BY-SA model)
+#   pip install morfeusz2                        # Polish (BSD 3-clause)
+# dwdsmor
+# spacy
+# morfeusz2

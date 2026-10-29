@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.venv-tmp/
+
+# AnkiExt data & private dictionaries (never commit/redistribute dict.cc files)
+dict/*.txt
+dict/*.zip
+data/
+
+# build outputs / scratch
+dist/
+.build-tmp/
+.pip-tmp/
+.build-venv/
+.pylib/
+.userbase/
+.pycache/
+*.sqlite
+
+# probes / scratch
+research/
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
+*.log

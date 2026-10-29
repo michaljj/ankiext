@@ -1,0 +1,1 @@
+"""German grammar: kaikki plural DB build + query."""
